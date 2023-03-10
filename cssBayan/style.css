@@ -103,6 +103,32 @@ main {
 
 
 
+
+
+@media (min-width: 820px) {
+  body {
+    font-size: 24px;
+  }
+
+  .main__item {
+    width: 60%;
+  }
+
+  .item__image {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 32px;
+  }
+
+  .item__image {
+    width: 500px;
+  }
+}
+
 /* FOOTER */
 .footer__container {
   padding: 20px 0;
