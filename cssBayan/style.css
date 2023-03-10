@@ -87,6 +87,12 @@ main {
   height: 25px;
 }
 
+.item__icon svg {
+  width: 25px;
+  height: 25px;
+  transition: all 0.2s;
+}
+
 .item__icon-plus {
   display: none;
 }
@@ -101,6 +107,7 @@ main {
 }
 
 
+
 .main__items:hover .item__title {
   color: black;
 }
@@ -109,11 +116,11 @@ main {
   display: block;
 }
 
-.main__items:hover .item__wrapper.active .item__icon-close {
+.main__items:hover .item__label input:checked .item__wrapper .item__icon-close {
   display: block;
 }
 
-.main__items:hover .item__wrapper.active .item__icon-plus {
+.main__items:hover .item__label input:checked .item__wrapper .item__icon-plus {
   display: none;
 }
 
@@ -126,7 +133,6 @@ main {
   display: none;
 }
 
-/*  */
 
 
 
@@ -136,23 +142,49 @@ main {
 }
 
 
-
-/*  */
-.item__wrapper.active .item__icon-close {
+.item__label input:checked~.item__wrapper .item__icon-close {
   display: none;
 }
 
-.item__wrapper.active .item__icon-plus {
+.main__items .item__label input:checked .item__wrapper .item__icon-close {
+  display: block;
+}
+
+.main__items:hover input:checked~.item__wrapper .item__icon-close {
+  display: block;
+}
+
+
+.item__label input:checked~.item__wrapper .item__icon-plus {
   display: none;
 }
 
-.item__wrapper.active .item__image {
+.item__label input:checked~.item__wrapper .item__image {
   height: 250px;
 }
 
-.item__wrapper.active .item__title {
+.item__label input:checked~.item__wrapper .item__title {
   color: black;
 }
+
+.item__label input:checked .item__icon-close {
+  display: block;
+}
+
+
+
+.item__container:active {
+  background-color: rgba(255, 255, 120, 1)
+}
+
+.item__label .item__wrapper:active .item__title {
+  color: blue;
+}
+
+.item__label .item__wrapper:active .item__icon svg {
+  fill: blue;
+}
+
 
 
 
@@ -188,4 +220,18 @@ main {
 
 .footer__content {
   text-align: center;
+}
+
+.input-circle {
+  height: 0;
+  width: 0;
+}
+
+.item__label {
+  cursor: pointer;
+}
+
+.item__label input {
+  width: 0;
+  height: 0;
 }
