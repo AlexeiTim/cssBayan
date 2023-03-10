@@ -101,6 +101,58 @@ main {
 }
 
 
+.main__items:hover .item__title {
+  color: black;
+}
+
+.main__items:hover .item__wrapper .item__icon-plus {
+  display: block;
+}
+
+.main__items:hover .item__wrapper.active .item__icon-close {
+  display: block;
+}
+
+.main__items:hover .item__wrapper.active .item__icon-plus {
+  display: none;
+}
+
+/* Hover for show/hide icon close/open */
+.item__wrapper .item__container:hover .item__icon-close {
+  display: block;
+}
+
+.item__wrapper .item__container:hover .item__icon-plus {
+  display: none;
+}
+
+/*  */
+
+
+
+/* Hover for show/hide image */
+.item__container:hover .item__image {
+  height: 250px;
+}
+
+
+
+/*  */
+.item__wrapper.active .item__icon-close {
+  display: none;
+}
+
+.item__wrapper.active .item__icon-plus {
+  display: none;
+}
+
+.item__wrapper.active .item__image {
+  height: 250px;
+}
+
+.item__wrapper.active .item__title {
+  color: black;
+}
 
 
 
